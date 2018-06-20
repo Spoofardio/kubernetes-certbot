@@ -1,5 +1,5 @@
 FROM alpine:3.4
-MAINTAINER Christian Hoffmeister <mail@choffmeister.de>
+LABEL maintainer="Christian Hoffmeister <mail@choffmeister.de>" 
 
 RUN apk add --no-cache --update wget bash certbot ca-certificates
 

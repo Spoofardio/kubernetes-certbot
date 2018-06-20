@@ -53,6 +53,13 @@ spec:
               name: letsencrypt-data
             - mountPath: /etc/letsencrypt-certs
               name: letsencrypt-certs-config
+          livenessProbe:
+            exec:
+              command:
+              - cat
+              - run.sh
+            initialDelaySeconds: 5
+            periodSeconds: 5
       volumes:
         - name: letsencrypt-data
           # TODO: Consider using real, secure storage on your cluster.
